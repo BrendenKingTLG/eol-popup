@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "ES6",                          // Set the target ECMAScript version to ES6
+      "module": "commonjs",                     // Specify module code generation
+      "lib": ["DOM", "DOM.Iterable", "ESNext"], // Include the standard library
+      "allowJs": true,                          // Allow JavaScript files to be compiled
+      "skipLibCheck": true,                     // Skip type checking of declaration files
+      "esModuleInterop": true,                  // Enables interoperability between CommonJS and ES Modules
+      "allowSyntheticDefaultImports": true,     // Allow default imports from modules without default export
+      "strict": true,                           // Enable all strict type-checking options
+      "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+      "noFallthroughCasesInSwitch": true,       // Report errors for fallthrough cases in switch statements
+      "moduleResolution": "node",               // Use Node.js-style module resolution
+      "resolveJsonModule": true,                // Include modules imported with '.json'
+      "isolatedModules": true,                  // Ensure that each file can be safely transpiled without relying on other imports
+      "jsx": "react-jsx"                        // Support JSX in TSX files for React (or "react" for older versions of React)
+    },
+    "include": ["src/**/*"],                    // Include all files in the 'src' directory
+    "exclude": ["node_modules", "**/*.test.ts"] // Exclude test files and node_modules from compilation
+  }
+  
