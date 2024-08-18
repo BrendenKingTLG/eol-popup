@@ -5,11 +5,11 @@ export class EndOfLifePopup {
   private preexistingPopupDate: Date | null;
 
   constructor(
-    currentDate: Date,
     monthlyThreshold: Date,
-    weeklyThreshold: Date
+    weeklyThreshold: Date,
+    currentDate?: Date
   ) {
-    this.currentDate = currentDate;
+    this.currentDate = currentDate || new Date();
     this.monthlyThreshold = monthlyThreshold;
     this.weeklyThreshold = weeklyThreshold;
     this.preexistingPopupDate = this.getLastPopupDateFromStorage();

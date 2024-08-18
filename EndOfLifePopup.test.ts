@@ -23,7 +23,7 @@ describe("EndOfLifePopup", () => {
     const weeklyDate = new Date("2024-08-10T00:00:00Z");
     const monthlyDate = new Date("2024-07-17T00:00:00Z");
 
-    new EndOfLifePopup(currentDate, monthlyDate, weeklyDate);
+    new EndOfLifePopup(monthlyDate, weeklyDate, currentDate);
 
     expect(mockSetItem).toHaveBeenCalledTimes(1);
     expect(mockSetItem).toHaveBeenCalledWith(
@@ -40,7 +40,7 @@ describe("EndOfLifePopup", () => {
 
     mockGetItem.mockReturnValue(lastPopupDate.toISOString());
 
-    new EndOfLifePopup(currentDate, monthlyDate, weeklyDate);
+    new EndOfLifePopup(monthlyDate, weeklyDate, currentDate);
 
     expect(mockSetItem).not.toHaveBeenCalled();
   });
@@ -53,7 +53,7 @@ describe("EndOfLifePopup", () => {
 
     mockGetItem.mockReturnValue(lastPopupDate.toISOString());
 
-    new EndOfLifePopup(currentDate, monthlyDate, weeklyDate);
+    new EndOfLifePopup(monthlyDate, weeklyDate, currentDate);
 
     expect(mockSetItem).toHaveBeenCalledTimes(1);
     expect(mockSetItem).toHaveBeenCalledWith(
@@ -70,7 +70,7 @@ describe("EndOfLifePopup", () => {
 
     mockGetItem.mockReturnValue(lastPopupDate.toISOString());
 
-    new EndOfLifePopup(currentDate, monthlyDate, weeklyDate);
+    new EndOfLifePopup(monthlyDate, weeklyDate, currentDate);
 
     expect(mockSetItem).toHaveBeenCalledTimes(1);
     expect(mockSetItem).toHaveBeenCalledWith(
@@ -87,7 +87,7 @@ describe("EndOfLifePopup", () => {
 
     mockGetItem.mockReturnValue(lastPopupDate.toISOString());
 
-    new EndOfLifePopup(currentDate, monthlyDate, weeklyDate);
+    new EndOfLifePopup(monthlyDate, weeklyDate, currentDate);
 
     expect(mockSetItem).not.toHaveBeenCalled();
   });
